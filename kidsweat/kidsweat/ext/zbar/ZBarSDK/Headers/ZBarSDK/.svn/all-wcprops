@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK
+END
+ZBarHelpController.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarHelpController.h
+END
+ZBarImageScanner.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarImageScanner.h
+END
+ZBarReaderView.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarReaderView.h
+END
+zbar.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/zbar.h
+END
+ZBarReaderViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarReaderViewController.h
+END
+ZBarSDK.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarSDK.h
+END
+ZBarImage.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarImage.h
+END
+ZBarSymbol.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarSymbol.h
+END
+ZBarCaptureReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarCaptureReader.h
+END
+ZBarReaderController.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarReaderController.h
+END
+ZBarCameraSimulator.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/iToy_ios/!svn/ver/36/trunk/Talker/Talker/ext/zbar/ZBarSDK/Headers/ZBarSDK/ZBarCameraSimulator.h
+END

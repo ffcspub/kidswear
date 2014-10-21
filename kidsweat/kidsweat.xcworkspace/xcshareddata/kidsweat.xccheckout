@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D5B7A7CA-76E3-4642-AF34-83E10DB9F86F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kidsweat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>747CBB25-5622-4804-BD7B-37845EA840D9</key>
+		<string>https://github.com/ffcspub/kidswear.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kidsweat/kidsweat.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>747CBB25-5622-4804-BD7B-37845EA840D9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ffcspub/kidswear.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>747CBB25-5622-4804-BD7B-37845EA840D9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>747CBB25-5622-4804-BD7B-37845EA840D9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kids</string>
+		</dict>
+	</array>
+</dict>
+</plist>
