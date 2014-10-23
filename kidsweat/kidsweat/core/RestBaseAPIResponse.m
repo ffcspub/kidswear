@@ -11,15 +11,15 @@
 @implementation RestBaseAPIResponse
 
 -(int)__errorcode{
-    return _errorcode;
+    return _Code;
 }
 
 -(NSString *)__message{
-    return _message;
+    return _Msg;
 }
 
 -(NSObject *)__result{
-    return _result;
+    return _Data;
 }
 
 @end

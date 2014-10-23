@@ -14,10 +14,9 @@
 #define METHOD_DELETE @"DELETE"
 #define METHOD_PATCH @"PATCH"
 
-//#define URL_SERVER_BASE @"http://192.168.9.204/rest/v1/"
-#define URL_SERVER_BASE @"http://121.207.243.132/rest/v1/"
+#define URL_SERVER_BASE @"http://tz.tuishang.com.cn/api/"
 
-#define API_LOGIN @"account/auth/login"
+#define API_LOGIN @"userapi.php"
 
 #define API_LOGOUT @"account/auth/logoff"
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UserApi.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,15 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    UserApiLoginRequest *request = [[UserApiLoginRequest alloc]init];
+    request.username = @"iwangzhi";
+    request.password = @"123456";
+    request.token = @"tongzhuang";
+    [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
+        NSLog(@"success,UserName:%@",response.Data.user_name);
+    } Fail:^(NSString *failDescript) {
+        NSLog(@"fail:%@",failDescript);
+    }];
     return YES;
 }
 

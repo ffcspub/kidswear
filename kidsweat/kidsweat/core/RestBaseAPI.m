@@ -17,7 +17,7 @@
 
 #define TIMEOUT_DEFAULT 30
 
-#define SUCCESS_CODE 0
+#define SUCCESS_CODE 1
 
 @interface RestBaseAPI (p)
 +(AFHTTPClient *)client;
@@ -63,54 +63,6 @@
         case 101:
             failDescription = @"用户已存在";
             break;
-        case 102:
-            failDescription = @"用户不存在";
-            break;
-        case 1000:
-            failDescription = @"授权过期";
-            break;
-        case 1001:
-            failDescription = @"登录失败";
-            break;
-        case 1002:
-            failDescription = @"注册失败";
-            break;
-        case 1003:
-            failDescription = @"参数有误";
-            break;
-        case 1004:
-            failDescription = @"获取设备信息失败";
-            break;
-        case 1005:
-            failDescription = @"无法联系设备";
-            break;
-        case 1006:
-            failDescription = @"操作超时";
-            break;
-        case 1011:
-            failDescription = @"密码错误太多次";
-            break;
-        case 2001:
-            failDescription = @"服务有误";
-            break;
-        case 2002:
-            failDescription = @"服务未开启";
-            break;
-        case 2020:
-            failDescription = @"数据库不存在";
-            break;
-        case 2021:
-            failDescription = @"数据库有误";
-            break;
-        case 2101:
-            failDescription = @"设备未注册";
-            break;
-        case 2102:
-            failDescription = @"设备已绑定";
-            break;
-        case 2103:
-            failDescription = @"设备未绑定";
-            break;
         default:
             break;
     }
@@ -139,7 +91,7 @@
 
 +(void)request:(RestBaseAPIRequest *)request completionBlockWithSuccess:(void(^)(RestBaseAPIResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail{
     AFHTTPClient *client = [RestBaseAPI clientByRequest:request];
-    client.parameterEncoding = AFJSONParameterEncoding;
+//    client.parameterEncoding = AFFormURLParameterEncoding;
     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
     client.allowsInvalidSSLCertificate = YES;
     NSDictionary *dict = request.lkDictionary;
@@ -154,15 +106,15 @@
             NSDictionary *dict = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
             if (dict) {
                 RestBaseAPIResponse *response = [dict objectByClass:[self responseClassByRequest:request]];
-                if (response.errorcode != SUCCESS_CODE) {
-                    NSString *errorMessage = [self getFailDescriptByErrorCode:response.errorcode];
+                if (response.Code != SUCCESS_CODE) {
+                    NSString *errorMessage = [self getFailDescriptByErrorCode:response.__errorcode];
                     if (errorMessage.length == 0) {
-                        errorMessage = response.message;
+                        errorMessage = response.__message;
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         fail(errorMessage);
                     });
-                    [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFCATION_ERROR object:nil userInfo:@{ERROR_CODE:[NSString stringWithFormat:@"%d",response.errorcode],ERROR_DESCRIPTION:errorMessage}];
+                    [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFCATION_ERROR object:nil userInfo:@{ERROR_CODE:[NSString stringWithFormat:@"%d",response.__errorcode],ERROR_DESCRIPTION:errorMessage}];
                     return;
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{

@@ -19,18 +19,18 @@
  *  错误码
  *
  */
-@property(nonatomic,assign) int errorcode;
+@property(nonatomic,assign) int Code;
 
 /**
  *  返回提示
  *
  */
-@property(nonatomic,strong) NSString *message;
+@property(nonatomic,strong) NSString *Msg;
 
 /**
  *  返回结果
  *
  */
-@property(nonatomic,strong) NSObject *result;
+@property(nonatomic,strong) NSObject *Data;
 
 @end
