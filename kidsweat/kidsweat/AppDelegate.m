@@ -8,24 +8,49 @@
 
 #import "AppDelegate.h"
 #import "UserApi.h"
+#import "MMDrawerController.h"
+#import "HomePageViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIViewController * centerViewController = [[HomePageViewController alloc] initWithNibName:@"HomePageViewController"];
+    UIViewController * leftSideDrawerViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController"];
+    
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    navigationController.navigationBarHidden = YES;
+    MMDrawerController * drawerController = [[MMDrawerController alloc]
+                                             initWithCenterViewController:navigationController
+                                             leftDrawerViewController:leftSideDrawerViewController
+                                             rightDrawerViewController:nil];
+    [drawerController setMaximumLeftDrawerWidth:243.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+
+     }];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = drawerController;
     [self.window makeKeyAndVisible];
-    UserApiLoginRequest *request = [[UserApiLoginRequest alloc]init];
-    request.username = @"iwangzhi";
-    request.password = @"123456";
-    request.token = @"tongzhuang";
-    [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
-        NSLog(@"success,UserName:%@",response.Data.user_name);
-    } Fail:^(NSString *failDescript) {
-        NSLog(@"fail:%@",failDescript);
-    }];
+    
+    
+    
+//    UserApiLoginRequest *request = [[UserApiLoginRequest alloc]init];
+//    request.username = @"iwangzhi";
+//    request.password = @"123456";
+//    request.token = @"tongzhuang";
+//    [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
+//        NSLog(@"success,UserName:%@",response.Data.user_name);
+//    } Fail:^(NSString *failDescript) {
+//        NSLog(@"fail:%@",failDescript);
+//    }];
     return YES;
 }
 
