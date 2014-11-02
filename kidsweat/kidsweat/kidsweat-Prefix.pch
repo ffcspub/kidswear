@@ -13,12 +13,13 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "AppDelegate.h"
+    #import "CommonViewController.h"
+    #import "ShareValue.h"
 #endif
 
 
 #define IOS7_OR_LATER ( [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define ShareAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
-#import "AppDelegate.h"
-#import "CommonViewController.h"
-#import "ShareValue.h"
+

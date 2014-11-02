@@ -16,7 +16,7 @@
 
 #define URL_SERVER_BASE @"http://tz.tuishang.com.cn/api/"
 
-#define API_LOGIN @"userapi.php"
+#define API_LOGIN @"userapi.php?act=login"
 
 #define API_LOGOUT @"account/auth/logoff"
 
