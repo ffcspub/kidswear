@@ -17,3 +17,36 @@
 }
 
 @end
+
+@implementation UserApiLogoutRequest
+
+-(NSString *)_apiPath{
+    return API_LOGOUT;
+}
+
+@end
+
+@implementation UserApiRegiterRequest
+
+-(NSString *)_apiPath{
+    return API_REGSITER;
+}
+
+@end
+
+@implementation UserApiValidateMailRegiterRequest
+
+-(NSString *)_apiPath{
+    return API_VALIDATE_EMAIL;
+}
+
+@end
+
+
+@implementation UserApiSendPwdToEmailRequest
+
+-(NSString *)_apiPath{
+    return API_SENDPWDTOEMAIL;
+}
+
+@end

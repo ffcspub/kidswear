@@ -16,4 +16,8 @@
 +(void)loginByRequest:(UserApiLoginRequest *)request completionBlockWithSuccess:(void(^)(UserApiLoginResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail;
 
 
++(void)logoutByRequest:(UserApiOutRequest *)request completionBlockWithSuccess:(void(^)(UserApiLoginResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail;
+
+
+
 @end
