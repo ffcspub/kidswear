@@ -50,3 +50,37 @@
 }
 
 @end
+
+@implementation UserApiOathRequest
+
+-(NSString *)_apiPath{
+    return API_OATH;
+}
+
+@end
+
+@implementation UserApiOathBindRequest
+
+-(NSString *)_apiPath{
+    return API_OATHBIND;
+}
+
+@end
+
+@implementation UserApiGetUserInfoRequest
+
+-(NSString *)_apiPath{
+    return API_GET_USERINFO;
+}
+
+@end
+
+@implementation UserApiUpdateUserInfoRequest
+
+-(NSString *)_apiPath{
+    return API_EDIT_USERINFO;
+}
+
+@end
+
+
