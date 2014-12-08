@@ -18,45 +18,23 @@
 
 #define API_LOGIN @"userapi.php?act=login"
 
-#define API_LOGOUT @"account/auth/logoff"
+#define API_LOGOUT @"userapi.php?act=logout"
 
-#define API_REGSITER @"account/user/register"
+#define API_REGSITER @"userapi.php?act=register"
 
-#define API_USERINFO @"account/user/userinfo"
+#define API_VALIDATE_EMAIL @"userapi.php?act=validate_email"
 
-#define API_DEVICEINFO @"account/hardware/deviceinfo"
+#define API_SENDPWDTOEMAIL @"userapi.php?act=send_pwd_email"
 
-#define API_BINDINGBYINFO @"dream/bindingbyinfo"
+#define API_OATH @"userapi.php?act=oath"
 
-#define API_BINDINGDEVICE @"dream/binding"
+#define API_OATHBIND @"userapi.php?act=oath_login"
 
-#define API_AUTHORIZE @"dream/role"
+#define API_GET_USERINFO @"userapi.php?act=profile"
 
-#define API_COMMAND @"dream/command"
+#define API_EDIT_USERINFO @"userapi.php?act=edit_profile"
 
-#define API_NOTIFY @"dream/querynotify"
-
-#define API_STATUS @"dream/devicestatus"
-
-#define API_SUBDEVICESTATUS @"ndhub/subdevicestatus"
-
-#define API_SUBDEVICE @"ndhub/subdevice"
-
-#define API_DEVICECLASS @"irlib/class"
-
-#define API_DEVICEBRAND @"irlib/brand"
-
-#define API_DEVICEPRODUCT @"irlib/product"
-
-#define API_IR @"irlib/ir"
-
-#define API_PUSH @"push/device"
-
-#define API_WEATHER_PROVINCE @"bazaars/weather/province"
-
-#define API_WEATHER_CITY @"bazaars/weather/city"
-
-#define API_WEATHER_REPORT @"bazaars/weather/report"
+#define API_GET_CARTDATA @"userapi.php?act=get_cart_data"
 
 #define NOTIFCATION_ERROR @"NOTIFCATION_ERROR"
 #define ERROR_DESCRIPTION @"ERROR_DESCRIPTION"
