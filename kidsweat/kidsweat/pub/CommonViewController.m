@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 0000
+    if (IOS7_OR_LATER) {
+        self.navigationController.navigationBar.translucent = NO;
+    }
+#endif
+    
     // Do any additional setup after loading the view.
+    //[self showLeftBarButtonItemWithImage:@"btn_back" target:self action:@selector(backAction)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +38,17 @@
         strNibName = [NSString stringWithFormat:@"%@_IOS6",nibNameOrNil];
     }
     return [self initWithNibName:strNibName bundle:nil];
+}
+
+- (IBAction)backAction{
+    if (self.navigationController.viewControllers.count == 1) {
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 }
 
 @end

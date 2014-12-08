@@ -10,6 +10,7 @@
 #import "UIView+Animation.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
+#import "FindPwdStepOneVCL.h"
 
 @implementation LoginView
 
@@ -30,31 +31,32 @@
 
 - (void)show{
     [[UIApplication sharedApplication].delegate.window addSubview:self];
-    [self.vLoginView popupAnimation:^{
+    [self.vLoginView dropdownAnimation:^{
     }];
 }
 
 - (void)hide{
     if(!self.vLoginView.hidden){
-        [self.vLoginView dribbleAwayAnimation:^{
+        [self.vLoginView pullupAnimation:^{
             [self removeFromSuperview];
         }];
     }else{
-        [self.vRegistView dribbleAwayAnimation:^{
+        [self.vRegistView pullupAnimation:^{
             [self removeFromSuperview];
         }];
     }
 }
 
-- (IBAction)handleBackLogin:(id)sender {
-    [UIView transitionWithView:self.vRegistView duration:0.3 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
-        self.vRegistView.alpha = 0;
-    } completion:^(BOOL finished) {
-        self.vRegistView.hidden = YES;
-        self.vRegistView.alpha = 1;
-        self.vLoginView.hidden = NO;
-    }];
+- (IBAction)handleHideView:(id)sender {
+    [self hide];
 }
+
+- (void)handleTapBg{
+    [self hide];
+}
+
+
+#pragma mark - login
 
 - (IBAction)handleToRegist:(id)sender {
     [UIView transitionWithView:self.vLoginView duration:0.3 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
@@ -67,11 +69,12 @@
     
 }
 
-- (IBAction)handleHideView:(id)sender {
-    [self hide];
-}
-
 - (IBAction)handleForgetPwd:(id)sender {
+    [self hide];
+    
+    FindPwdStepOneVCL *vcl = [[FindPwdStepOneVCL alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
+    [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 
 - (IBAction)handleBtnLogin:(id)sender {
@@ -95,6 +98,18 @@
 }
 
 - (IBAction)handleWxLogin:(id)sender {
+}
+
+#pragma mark - regist
+
+- (IBAction)handleBackLogin:(id)sender {
+    [UIView transitionWithView:self.vRegistView duration:0.3 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+        self.vRegistView.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.vRegistView.hidden = YES;
+        self.vRegistView.alpha = 1;
+        self.vLoginView.hidden = NO;
+    }];
 }
 
 - (IBAction)handleBtnRegist:(id)sender {
@@ -123,10 +138,6 @@
     }
     
     
-}
-
-- (void)handleTapBg{
-    [self hide];
 }
 
 @end

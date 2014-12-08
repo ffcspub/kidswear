@@ -16,4 +16,10 @@
 // 逐渐变小消失动画
 - (void)dribbleAwayAnimation:(void(^)(void))finish;
 
+// 落下动画
+- (void)dropdownAnimation:(void(^)(void))finish;
+
+// 上升收回动画
+- (void)pullupAnimation:(void(^)(void))finish;
+
 @end

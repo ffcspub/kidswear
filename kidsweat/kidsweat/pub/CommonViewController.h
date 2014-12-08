@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UINavigationBar+BarItem.h"
 
 @interface CommonViewController : UIViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil;
-
+- (IBAction)backAction;
 @end

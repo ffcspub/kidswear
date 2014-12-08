@@ -10,7 +10,8 @@
 #import "UIViewController+MMDrawerController.h"
 #import "LoginView.h"
 
-@interface MenuViewController ()
+
+@interface MenuViewController ()<UIViewControllerTransitioningDelegate>
 
 @end
 

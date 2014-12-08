@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
             <connections>
+                <outlet property="btnLogout" destination="r5c-Ex-O9G" id="PdV-ur-xh9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-85-wrv" userLabel="View － menu">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bg_menu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="opv-q8-jYy">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPO-Q3-Rzg" userLabel="View － user">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_usericon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XvP-DN-3Z5">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_usericon" translatesAutoresizingMaskIntoConstraints="NO" id="XvP-DN-3Z5">
                                     <rect key="frame" x="35" y="18" width="76" height="76"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最美沙滩最美" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm8-Ko-KI1">
@@ -34,9 +34,18 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="line_menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="2vM-jN-v53">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="line_menu" translatesAutoresizingMaskIntoConstraints="NO" id="2vM-jN-v53">
                                     <rect key="frame" x="10" y="111" width="224" height="1"/>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21t-g6-uGH" userLabel="Button - login">
+                                    <rect key="frame" x="10" y="18" width="224" height="76"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="handleShowLoginView:" destination="-1" eventType="touchUpInside" id="KIk-fY-WWN"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -57,10 +66,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-HP-I07">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_home.png">
+                                            <state key="normal" image="icon_home">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_home_h.png"/>
+                                            <state key="highlighted" image="icon_home_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -76,10 +85,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owI-p1-zNa">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_catalog.png">
+                                            <state key="normal" image="icon_catalog">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_catalog_h.png"/>
+                                            <state key="highlighted" image="icon_catalog_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -95,10 +104,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbs-5f-P2l">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_magazine.png">
+                                            <state key="normal" image="icon_magazine">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_magazine_h.png"/>
+                                            <state key="highlighted" image="icon_magazine_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -114,10 +123,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrz-ou-iZu">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_yellowheart.png">
+                                            <state key="normal" image="icon_yellowheart">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_yellowheart_h.png"/>
+                                            <state key="highlighted" image="icon_yellowheart_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -133,10 +142,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JX-Zd-aWy">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_huasuan.png">
+                                            <state key="normal" image="icon_huasuan">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_huasuan_h.png"/>
+                                            <state key="highlighted" image="icon_huasuan_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -152,10 +161,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNo-pn-xXp">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_suit.png">
+                                            <state key="normal" image="icon_suit">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_suit_h.png"/>
+                                            <state key="highlighted" image="icon_suit_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -171,10 +180,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOX-eD-gPD">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_about.png">
+                                            <state key="normal" image="icon_about">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_about_h.png"/>
+                                            <state key="highlighted" image="icon_about_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -190,10 +199,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-eA-K6P">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_account.png">
+                                            <state key="normal" image="icon_account">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_account_h.png"/>
+                                            <state key="highlighted" image="icon_account_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -209,20 +218,23 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-xt-7xk">
                                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
-                                            <state key="normal" image="icon_contactus.png">
+                                            <state key="normal" image="icon_contactus">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" image="icon_contactus_h.png"/>
+                                            <state key="highlighted" image="icon_contactus_h"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-Ex-O9G">
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-Ex-O9G" userLabel="Button - logout">
                                     <rect key="frame" x="36" y="307" width="170" height="37"/>
-                                    <state key="normal" backgroundImage="btn_yellow.png">
+                                    <state key="normal" backgroundImage="btn_yellow">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="highlighted" backgroundImage="btn_yellow_h.png"/>
+                                    <state key="highlighted" backgroundImage="btn_yellow_h"/>
+                                    <connections>
+                                        <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="rcG-1q-WrW"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -253,27 +265,27 @@
     </objects>
     <resources>
         <image name="bg_menu.jpg" width="244" height="568"/>
-        <image name="btn_yellow.png" width="170" height="37"/>
-        <image name="btn_yellow_h.png" width="170" height="37"/>
-        <image name="icon_about.png" width="32" height="32"/>
-        <image name="icon_about_h.png" width="32" height="32"/>
-        <image name="icon_account.png" width="32" height="32"/>
-        <image name="icon_account_h.png" width="32" height="32"/>
-        <image name="icon_catalog.png" width="32" height="32"/>
-        <image name="icon_catalog_h.png" width="32" height="32"/>
-        <image name="icon_contactus.png" width="32" height="32"/>
-        <image name="icon_contactus_h.png" width="32" height="32"/>
-        <image name="icon_home.png" width="32" height="32"/>
-        <image name="icon_home_h.png" width="32" height="32"/>
-        <image name="icon_huasuan.png" width="32" height="32"/>
-        <image name="icon_huasuan_h.png" width="32" height="32"/>
-        <image name="icon_magazine.png" width="32" height="32"/>
-        <image name="icon_magazine_h.png" width="32" height="32"/>
-        <image name="icon_suit.png" width="32" height="32"/>
-        <image name="icon_suit_h.png" width="32" height="32"/>
-        <image name="icon_usericon.png" width="76" height="76"/>
-        <image name="icon_yellowheart.png" width="32" height="32"/>
-        <image name="icon_yellowheart_h.png" width="32" height="32"/>
-        <image name="line_menu.png" width="224" height="1"/>
+        <image name="btn_yellow" width="170" height="37"/>
+        <image name="btn_yellow_h" width="170" height="37"/>
+        <image name="icon_about" width="32" height="32"/>
+        <image name="icon_about_h" width="32" height="32"/>
+        <image name="icon_account" width="32" height="32"/>
+        <image name="icon_account_h" width="32" height="32"/>
+        <image name="icon_catalog" width="32" height="32"/>
+        <image name="icon_catalog_h" width="32" height="32"/>
+        <image name="icon_contactus" width="32" height="32"/>
+        <image name="icon_contactus_h" width="32" height="32"/>
+        <image name="icon_home" width="32" height="32"/>
+        <image name="icon_home_h" width="32" height="32"/>
+        <image name="icon_huasuan" width="32" height="32"/>
+        <image name="icon_huasuan_h" width="32" height="32"/>
+        <image name="icon_magazine" width="32" height="32"/>
+        <image name="icon_magazine_h" width="32" height="32"/>
+        <image name="icon_suit" width="32" height="32"/>
+        <image name="icon_suit_h" width="32" height="32"/>
+        <image name="icon_usericon" width="76" height="76"/>
+        <image name="icon_yellowheart" width="32" height="32"/>
+        <image name="icon_yellowheart_h" width="32" height="32"/>
+        <image name="line_menu" width="224" height="1"/>
     </resources>
 </document>

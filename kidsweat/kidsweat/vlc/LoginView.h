@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfPwdRegist;
 @property (weak, nonatomic) IBOutlet UITextField *tfPwdAgainRegist;
 
+
+
 - (void)show;
 - (void)hide;
 - (IBAction)handleBackLogin:(id)sender;
