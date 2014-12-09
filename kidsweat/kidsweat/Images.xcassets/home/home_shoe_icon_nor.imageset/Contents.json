@@ -6,13 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "home_bag_icon_nor@2x.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "home_bag_icon_nor@3x.png"
+      "filename" : "home_shoe_icon_nor@3x.png"
     }
   ],
   "info" : {

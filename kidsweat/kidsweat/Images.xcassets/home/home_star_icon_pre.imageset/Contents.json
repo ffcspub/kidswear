@@ -7,12 +7,11 @@
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "home_bag_icon_nor@2x.png"
+      "filename" : "home_star_icon_pre@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "home_bag_icon_nor@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {
