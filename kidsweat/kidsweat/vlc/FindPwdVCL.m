@@ -6,14 +6,14 @@
 //  Copyright (c) 2014年 ilikeido. All rights reserved.
 //
 
-#import "FindPwdStepOneVCL.h"
+#import "FindPwdVCL.h"
 #import "LoginView.h"
 
-@interface FindPwdStepOneVCL ()
+@interface FindPwdVCL ()
 
 @end
 
-@implementation FindPwdStepOneVCL
+@implementation FindPwdVCL
 
 - (void)viewDidLoad {
     [super viewDidLoad];

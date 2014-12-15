@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindPwdStepOneVCL">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindPwdVCL">
             <connections>
                 <outlet property="tfMail" destination="PQ5-Vd-42m" id="qAz-Eo-Pul"/>
                 <outlet property="vStepOne" destination="5to-d3-1wx" id="9ge-8S-VU6"/>

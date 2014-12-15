@@ -10,7 +10,7 @@
 #import "UIView+Animation.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
-#import "FindPwdStepOneVCL.h"
+#import "FindPwdVCL.h"
 
 @implementation LoginView
 
@@ -72,7 +72,7 @@
 - (IBAction)handleForgetPwd:(id)sender {
     [self hide];
     
-    FindPwdStepOneVCL *vcl = [[FindPwdStepOneVCL alloc] init];
+    FindPwdVCL *vcl = [[FindPwdVCL alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
     [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:nav animated:YES completion:nil];
 }

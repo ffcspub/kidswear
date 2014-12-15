@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindPwdStepOneVCL : CommonViewController
+@interface FindPwdVCL : CommonViewController
 
 @property (weak, nonatomic) IBOutlet UIView *vStepOne;
 @property (weak, nonatomic) IBOutlet UIView *vStepTwo;
