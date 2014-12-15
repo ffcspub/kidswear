@@ -13,6 +13,7 @@
 
 @interface UserApi :RestBaseAPI
 
+
 +(void)loginByRequest:(UserApiLoginRequest *)request completionBlockWithSuccess:(void(^)(UserApiLoginResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail;
 
 

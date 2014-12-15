@@ -10,6 +10,7 @@
 
 @interface UserInfo : NSObject
 
+@property(nonatomic,strong) NSString *token;
 @property(nonatomic,strong) NSString *user_id;
 @property(nonatomic,strong) NSString *email;
 @property(nonatomic,strong) NSString *user_name;

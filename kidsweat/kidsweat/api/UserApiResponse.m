@@ -10,6 +10,36 @@
 
 @implementation UserApiLoginResponse
 
+@end
+
+
+@implementation UserApiLogoutResponse
+
+
+@end
+
+@implementation UserApiRegisterResponse
+
+
+@end
+
+@implementation UserApiOathResponse
+
+
+@end
+
+@implementation UserApiOathBindResponse
+
+
+@end
+
+@implementation UserApiGetUserInfoResponse
+
+
+@end
+
+
+@implementation UserApiUpdateUserInfoResponse
 
 
 @end
