@@ -34,7 +34,7 @@
 
 
 /**
- * 登录操作
+ * 登出操作
  */
 @interface UserApiLogoutRequest : RestBaseAPIRequest
 
@@ -53,7 +53,7 @@
 /**
  * 注册操作
  */
-@interface UserApiRegiterRequest : RestBaseAPIRequest
+@interface UserApiRegisterRequest : RestBaseAPIRequest
 
 /**
  * 邮箱
@@ -71,17 +71,13 @@
 /**
  * 验证邮箱是否可以注册
  */
-@interface UserApiValidateMailRegiterRequest : RestBaseAPIRequest
+@interface UserApiValidateMailRequest : RestBaseAPIRequest
 
 /**
  * 邮箱
  */
 @property(nonatomic,strong) NSString *username;
 
-/**
- * token
- */
-@property(nonatomic,strong) NSString *token;
 
 @end
 

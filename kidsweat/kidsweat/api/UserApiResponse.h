@@ -41,6 +41,22 @@
 @end
 
 /**
+ * 验证邮箱是否可以注册结果
+ */
+@interface UserApiValidateMailResponse : RestBaseAPIResponse
+
+
+@end
+
+/**
+ * 找回密码
+ */
+@interface UserApiSendPwdToEmailResponse : RestBaseAPIResponse
+
+
+@end
+
+/**
  * 第三方登录
  */
 @interface UserApiOathResponse : RestBaseAPIResponse

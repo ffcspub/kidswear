@@ -26,7 +26,7 @@
 
 @end
 
-@implementation UserApiRegiterRequest
+@implementation UserApiRegisterRequest
 
 -(NSString *)_apiPath{
     return API_REGSITER;
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation UserApiValidateMailRegiterRequest
+@implementation UserApiValidateMailRequest
 
 -(NSString *)_apiPath{
     return API_VALIDATE_EMAIL;

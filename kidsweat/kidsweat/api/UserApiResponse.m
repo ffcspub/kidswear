@@ -23,6 +23,16 @@
 
 @end
 
+@implementation UserApiValidateMailResponse
+
+
+@end
+
+@implementation UserApiSendPwdToEmailResponse
+
+
+@end
+
 @implementation UserApiOathResponse
 
 
