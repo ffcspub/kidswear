@@ -7,7 +7,21 @@
 //
 
 #import "ProductApiResponse.h"
+#import "Good.h"
 
-@implementation ProductApiResponse
+@implementation GetCarGoodsApiResponse
+
++(Class)__Goods_listClass{
+    return [Good class];
+}
+
+@end
+
+
+@implementation DropCarGoodsApiRequest
+
+@end
+
+@implementation UpdateCarApiRequest
 
 @end

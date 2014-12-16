@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPI.h"
+#import "ProductApiRequest.h"
+#import "ProductApiResponse.h"
 
-@interface ProductApi : NSObject
+@interface ProductApi : RestBaseAPI
+
+
 
 @end

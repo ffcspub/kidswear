@@ -34,7 +34,22 @@
 
 #define API_EDIT_USERINFO @"userapi.php?act=edit_profile"
 
-#define API_GET_CARTDATA @"userapi.php?act=get_cart_data"
+#define API_GET_CARTLIST @"userapi.php?act=get_cart_list"
+
+#define API_DROP_CARTGOODS @"userapi.php?act=drop_cart_goods"
+
+#define API_UPDATE_CART @"userapi.php?act=update_cart"
+
+#define API_GET_CONSIGNEE_LIST @"userapi.php?act=get_consignee_list"
+
+#define API_DROP_CONSIGNEE @"userapi.php?act=drop_consignee"
+
+#define API_ADDUPDATE_CONSIGNEE @"userapi.php?act=add_update_consignee"
+
+#define API_GET_ORDER_LIST @"userapi.php?act=get_order_list"
+
+
+#define API_GET_ORDER_INFO @"userapi.php?act=get_order_info"
 
 #define NOTIFCATION_ERROR @"NOTIFCATION_ERROR"
 #define ERROR_DESCRIPTION @"ERROR_DESCRIPTION"

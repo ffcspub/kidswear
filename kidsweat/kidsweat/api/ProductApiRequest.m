@@ -7,7 +7,101 @@
 //
 
 #import "ProductApiRequest.h"
+#import "ServerContext.h"
 
-@implementation ProductApiRequest
+@implementation GetCarGoodsApiRequest
+
+-(NSString *)_apiPath{
+    return API_GET_CARTLIST;
+}
 
 @end
+
+@implementation DropCarGoodsApiRequest
+
+-(NSString *)_apiPath{
+    return API_DROP_CARTGOODS;
+}
+
+@end
+
+
+@implementation UpdateCarApiRequest
+
+-(NSString *)_apiPath{
+    return API_UPDATE_CART                                                                                                                                             ;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
