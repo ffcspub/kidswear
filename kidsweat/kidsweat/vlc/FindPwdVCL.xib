@@ -21,16 +21,16 @@
                 <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53W-7r-w51" userLabel="View - steptwo">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="btn_resetpwd" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-U1-gKu">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="secret_shez_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-U1-gKu">
                             <rect key="frame" x="138" y="52" width="45" height="45"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z0-LE-uNB">
                             <rect key="frame" x="60" y="202" width="200" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <state key="normal" title="确定" backgroundImage="btn_green">
+                            <state key="normal" title="确定" backgroundImage="login_dengl_btn_nor">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted" backgroundImage="btn_green_h"/>
+                            <state key="highlighted" backgroundImage="login_dengl_btn_pre"/>
                             <connections>
                                 <action selector="handelConfirm:" destination="-1" eventType="touchUpInside" id="zsp-Lk-5Qr"/>
                             </connections>
@@ -56,7 +56,7 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-9W-sJB">
                             <rect key="frame" x="0.0" y="58" width="320" height="35"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Oj-pex">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="secret_email_shur_box" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Oj-pex">
                                     <rect key="frame" x="20" y="0.0" width="280" height="35"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-Vd-42m">
@@ -64,7 +64,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_mail" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-5d-EUJ">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="secret_email_icon" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-5d-EUJ">
                                     <rect key="frame" x="30" y="7" width="22" height="22"/>
                                 </imageView>
                             </subviews>
@@ -73,10 +73,10 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOo-b4-49U">
                             <rect key="frame" x="60" y="125" width="200" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <state key="normal" title="下一步" backgroundImage="btn_green">
+                            <state key="normal" title="下一步" backgroundImage="login_dengl_btn_nor">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted" backgroundImage="btn_green_h"/>
+                            <state key="highlighted" backgroundImage="login_dengl_btn_pre"/>
                             <connections>
                                 <action selector="handleNextStep:" destination="-1" eventType="touchUpInside" id="93s-Tf-y2M"/>
                             </connections>
@@ -89,10 +89,10 @@
         </view>
     </objects>
     <resources>
-        <image name="bg_input" width="255" height="35"/>
-        <image name="btn_green" width="200" height="36"/>
-        <image name="btn_green_h" width="200" height="36"/>
-        <image name="btn_resetpwd" width="45" height="45"/>
-        <image name="icon_mail" width="22" height="22"/>
+        <image name="login_dengl_btn_nor" width="200" height="36"/>
+        <image name="login_dengl_btn_pre" width="200" height="36"/>
+        <image name="secret_email_icon" width="22" height="22"/>
+        <image name="secret_email_shur_box" width="290" height="35"/>
+        <image name="secret_shez_icon" width="45" height="45"/>
     </resources>
 </document>

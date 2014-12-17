@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -20,10 +21,10 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFT-9v-Ppq" userLabel="View - top">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_logintop" translatesAutoresizingMaskIntoConstraints="NO" id="yB7-8U-2j1">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_top_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yB7-8U-2j1">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_arrowleft" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-lI-e0T">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_return_icon_nor" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-lI-e0T">
                                     <rect key="frame" x="10" y="9" width="22" height="22"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFG-hE-hos">
@@ -43,10 +44,10 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-8E-Qhv" userLabel="View - regist">
                             <rect key="frame" x="0.0" y="41" width="280" height="327"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="3zu-o3-q0Q">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="3zu-o3-q0Q">
                                     <rect key="frame" x="13" y="24" width="255" height="35"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_user" translatesAutoresizingMaskIntoConstraints="NO" id="6iK-9m-XXQ">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6iK-9m-XXQ">
                                     <rect key="frame" x="20" y="31" width="22" height="22"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TME-iB-M54">
@@ -54,10 +55,10 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-AX-XCe">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-AX-XCe">
                                     <rect key="frame" x="12" y="83" width="255" height="35"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_lock" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-5I-eIb">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-5I-eIb">
                                     <rect key="frame" x="20" y="89" width="22" height="22"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFt-BA-Kjt">
@@ -65,10 +66,10 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-Db-gZc">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-Db-gZc">
                                     <rect key="frame" x="12" y="141" width="255" height="35"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_lock" translatesAutoresizingMaskIntoConstraints="NO" id="FCP-ju-xXF">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FCP-ju-xXF">
                                     <rect key="frame" x="20" y="148" width="22" height="22"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qI-5H-uDn">
@@ -78,10 +79,10 @@
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uva-Xd-opU">
                                     <rect key="frame" x="40" y="216" width="200" height="36"/>
-                                    <state key="normal" title="注册" backgroundImage="btn_green">
+                                    <state key="normal" title="注册" backgroundImage="login_dengl_btn_nor">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="highlighted" backgroundImage="btn_green_h"/>
+                                    <state key="highlighted" backgroundImage="login_dengl_btn_pre"/>
                                     <connections>
                                         <action selector="handleBtnRegist:" destination="iN0-l3-epB" eventType="touchUpInside" id="lZf-iW-ce8"/>
                                     </connections>
@@ -99,7 +100,7 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-UQ-W9g" userLabel="View - top">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_logintop" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-dA-AFg">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_top_bg" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-dA-AFg">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-JX-tHc">
@@ -115,10 +116,10 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv8-Gy-VNQ" userLabel="Button - back">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="41"/>
-                                    <state key="normal" image="icon_arrowleft">
+                                    <state key="normal" image="login_return_icon_nor">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="highlighted" image="icon_arrowleft_h"/>
+                                    <state key="highlighted" image="login_return_icon_pre"/>
                                     <connections>
                                         <action selector="handleHideView:" destination="iN0-l3-epB" eventType="touchUpInside" id="7d6-LA-61n"/>
                                     </connections>
@@ -129,10 +130,10 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfu-1r-mBR" userLabel="View - login">
                             <rect key="frame" x="0.0" y="41" width="280" height="190"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-uS-WVK">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_top_bg" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-uS-WVK">
                                     <rect key="frame" x="13" y="24" width="255" height="35"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_user" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-6M-RJ1">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-6M-RJ1">
                                     <rect key="frame" x="20" y="31" width="22" height="22"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19R-Ir-Ksu">
@@ -140,10 +141,10 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_input" translatesAutoresizingMaskIntoConstraints="NO" id="S06-Mn-I1t">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="S06-Mn-I1t">
                                     <rect key="frame" x="12" y="75" width="255" height="35"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_lock" translatesAutoresizingMaskIntoConstraints="NO" id="cid-x4-fi6">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cid-x4-fi6">
                                     <rect key="frame" x="20" y="81" width="22" height="22"/>
                                 </imageView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4j-az-pvg">
@@ -167,10 +168,10 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-wb-ZO7">
                                     <rect key="frame" x="40" y="154" width="200" height="36"/>
-                                    <state key="normal" title="登录" backgroundImage="btn_green">
+                                    <state key="normal" title="登录" backgroundImage="login_dengl_btn_nor">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="highlighted" backgroundImage="btn_green_h"/>
+                                    <state key="highlighted" backgroundImage="login_dengl_btn_pre"/>
                                     <connections>
                                         <action selector="handleBtnLogin:" destination="iN0-l3-epB" eventType="touchUpInside" id="RIk-Pe-AZn"/>
                                     </connections>
@@ -181,10 +182,10 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-KD-i2S" userLabel="View - other login">
                             <rect key="frame" x="0.0" y="261" width="280" height="107"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="line_color1" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-W0-TKV">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_line_left" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-W0-TKV">
                                     <rect key="frame" x="10" y="8" width="95" height="2"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="line_color2" translatesAutoresizingMaskIntoConstraints="NO" id="3dl-uS-I8Q">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_line_right" translatesAutoresizingMaskIntoConstraints="NO" id="3dl-uS-I8Q">
                                     <rect key="frame" x="175" y="8" width="95" height="2"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第三方登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZD-Nj-DMe">
@@ -198,10 +199,10 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP9-Xc-hdd">
                                             <rect key="frame" x="8" y="0.0" width="44" height="44"/>
-                                            <state key="normal" backgroundImage="icon_sina">
+                                            <state key="normal" backgroundImage="login_weib_icon_nor">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" backgroundImage="icon_sina_h"/>
+                                            <state key="highlighted" backgroundImage="login_weib_icon_pre"/>
                                             <connections>
                                                 <action selector="handleSinaLogin:" destination="iN0-l3-epB" eventType="touchUpInside" id="A8h-d7-XHd"/>
                                             </connections>
@@ -220,10 +221,10 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-JX-4UB">
                                             <rect key="frame" x="8" y="0.0" width="44" height="44"/>
-                                            <state key="normal" backgroundImage="icon_weixin">
+                                            <state key="normal" backgroundImage="login_weix_icon_nor">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" backgroundImage="icon_weixin_h"/>
+                                            <state key="highlighted" backgroundImage="login_weix_icon_pre"/>
                                             <connections>
                                                 <action selector="handleWxLogin:" destination="iN0-l3-epB" eventType="touchUpOutside" id="KQi-tJ-Bnl"/>
                                             </connections>
@@ -264,19 +265,19 @@
         </view>
     </objects>
     <resources>
-        <image name="bg_input" width="255" height="35"/>
-        <image name="bg_logintop" width="279" height="41"/>
-        <image name="btn_green" width="200" height="36"/>
-        <image name="btn_green_h" width="200" height="36"/>
-        <image name="icon_arrowleft" width="22" height="22"/>
-        <image name="icon_arrowleft_h" width="22" height="22"/>
-        <image name="icon_lock" width="22" height="22"/>
-        <image name="icon_sina" width="44" height="44"/>
-        <image name="icon_sina_h" width="44" height="44"/>
-        <image name="icon_user" width="22" height="22"/>
-        <image name="icon_weixin" width="44" height="44"/>
-        <image name="icon_weixin_h" width="44" height="44"/>
-        <image name="line_color1" width="95" height="2"/>
-        <image name="line_color2" width="95" height="2"/>
+        <image name="login_dengl_btn_nor" width="200" height="36"/>
+        <image name="login_dengl_btn_pre" width="200" height="36"/>
+        <image name="login_line_left" width="95" height="2"/>
+        <image name="login_line_right" width="95" height="2"/>
+        <image name="login_return_icon_nor" width="22" height="22"/>
+        <image name="login_return_icon_pre" width="22" height="22"/>
+        <image name="login_secrete_icon" width="22" height="22"/>
+        <image name="login_shuru_box" width="255" height="35"/>
+        <image name="login_top_bg" width="279" height="41"/>
+        <image name="login_user_icon" width="22" height="22"/>
+        <image name="login_weib_icon_nor" width="60" height="60"/>
+        <image name="login_weib_icon_pre" width="44" height="44"/>
+        <image name="login_weix_icon_nor" width="44" height="44"/>
+        <image name="login_weix_icon_pre" width="44" height="44"/>
     </resources>
 </document>
