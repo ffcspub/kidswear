@@ -26,7 +26,7 @@
 /**
  *  删除购物车商品列表
  */
-@interface DropCarGoodsApiRequest : RestBaseAPIResponse
+@interface DropCarGoodsApiResponse : RestBaseAPIResponse
 
 @property(nonatomic,strong) NSString *rec_id;
 
@@ -35,7 +35,7 @@
 /**
  *  修改购物车商品列表
  */
-@interface UpdateCarApiRequest : RestBaseAPIResponse
+@interface UpdateCarApiResponse : RestBaseAPIResponse
 
 @property(nonatomic,strong) NSString *rec_id;
 

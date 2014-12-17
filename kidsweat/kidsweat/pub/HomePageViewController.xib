@@ -59,10 +59,10 @@
                                 <constraint firstAttribute="height" constant="44" id="fJn-pd-xoB"/>
                                 <constraint firstAttribute="width" constant="58" id="nj9-m0-Sm8"/>
                             </constraints>
-                            <state key="normal" image="icon_shopcart">
+                            <state key="normal" image="home_car_icon_nor">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted" image="icon_shopcart_h"/>
+                            <state key="highlighted" image="home_car_icon_pre"/>
                             <connections>
                                 <action selector="handleShoppingcart:" destination="-1" eventType="touchUpInside" id="sKu-xc-mLf"/>
                             </connections>
@@ -278,13 +278,15 @@
                     <exclude reference="aFD-PZ-Ud2"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="-156" y="-614"/>
+            <point key="canvasLocation" x="158" y="-626"/>
         </view>
     </objects>
     <resources>
         <image name="home_bag_icon_nor" width="55" height="55"/>
         <image name="home_banner" width="320" height="122"/>
         <image name="home_boy_icon_nor" width="55" height="55"/>
+        <image name="home_car_icon_nor" width="22" height="22"/>
+        <image name="home_car_icon_pre" width="22" height="22"/>
         <image name="home_girl_icon_nor" width="55" height="55"/>
         <image name="home_jiaj_icon_nor" width="55" height="55"/>
         <image name="home_line1" width="320" height="1"/>
@@ -297,7 +299,5 @@
         <image name="home_shoe_icon_nor" width="55" height="55"/>
         <image name="home_tab_box" width="90" height="110"/>
         <image name="home_zuixs_img" width="89" height="65"/>
-        <image name="icon_shopcart" width="22" height="22"/>
-        <image name="icon_shopcart_h" width="22" height="22"/>
     </resources>
 </document>

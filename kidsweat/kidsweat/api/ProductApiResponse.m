@@ -17,11 +17,10 @@
 
 @end
 
-
-@implementation DropCarGoodsApiRequest
+@implementation DropCarGoodsApiResponse
 
 @end
 
-@implementation UpdateCarApiRequest
+@implementation UpdateCarApiResponse
 
 @end
