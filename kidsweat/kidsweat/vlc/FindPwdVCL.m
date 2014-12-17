@@ -8,6 +8,7 @@
 
 #import "FindPwdVCL.h"
 #import "LoginView.h"
+#import "UINavigationBar+BarItem.h"
 
 @interface FindPwdVCL ()
 
@@ -35,7 +36,7 @@
 - (void)initView{
     self.title = @"找回密码";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_arrowleft"] style:UIBarButtonItemStylePlain target:self action:@selector(hanleLeftBtn)];
+    [self showLeftBarButtonItemWithImage:@"login_return_icon_nor" target:self action:@selector(hanleLeftBtn)];
     [[UIApplication sharedApplication].delegate.window.rootViewController.view bringSubviewToFront:self.view];
     
     _vStepOne.hidden = NO;

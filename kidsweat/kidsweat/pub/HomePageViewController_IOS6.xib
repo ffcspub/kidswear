@@ -111,7 +111,7 @@
     </objects>
     <resources>
         <image name="bg_search" width="201" height="28"/>
-        <image name="icon_menu" width="22" height="22"/>
+        <image name="icon_menu" width="244" height="568"/>
         <image name="icon_menu_h" width="22" height="22"/>
         <image name="icon_search" width="22" height="22"/>
         <image name="icon_shopcart" width="22" height="22"/>
