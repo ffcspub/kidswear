@@ -11,12 +11,20 @@
 
 @interface HomePageViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *btn_cartCount;
+
+@property (weak, nonatomic) IBOutlet UIView *view_top;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation HomePageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
     // Do any additional setup after loading the view from its nib.
 
 }
@@ -41,5 +49,8 @@
 }
 
 - (IBAction)handleShoppingcart:(id)sender {
+    
 }
+
+
 @end
