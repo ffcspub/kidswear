@@ -9,6 +9,10 @@
 #import "FindPwdVCL.h"
 #import "LoginView.h"
 #import "UINavigationBar+BarItem.h"
+#import "UserApi.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
+#import "NSString+External.h"
 
 @interface FindPwdVCL ()
 
@@ -41,8 +45,6 @@
     
     _vStepOne.hidden = NO;
     _vStepTwo.hidden = YES;
-    
-    
 }
 
 #pragma mark - Function
@@ -59,11 +61,43 @@
 }
 
 - (IBAction)handleNextStep:(id)sender {
-    _vStepOne.hidden = YES;
-    _vStepTwo.hidden = NO;
+    if(_tfMail.text.length < 1){
+        [MBProgressHUD showError:@"请输入邮箱" toView:self.view];
+        return;
+    }
+    
+    if(![_tfMail.text isEmail]){
+        [MBProgressHUD showError:@"邮箱格式错误" toView:self.view];
+        return;
+    }
+    
+    [self sendPwdToEmailReq:_tfMail.text];
 }
 
 - (IBAction)handelConfirm:(id)sender {
     [self close];
 }
+
+#pragma mark - Request
+
+- (void)sendPwdToEmailReq:(NSString *)email{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    UserApiSendPwdToEmailRequest *request = [[UserApiSendPwdToEmailRequest alloc]init];
+    request.email = email;
+    
+    [UserApi sendPwdToEmailByRequest:request completionBlockWithSuccess:^(UserApiSendPwdToEmailResponse *response) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showSuccess:@"发送成功" toView:self.view];
+        
+        _vStepOne.hidden = YES;
+        _vStepTwo.hidden = NO;
+        
+    } Fail:^(NSString *failDescript) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showError:failDescript toView:self.view];
+        
+    }];
+}
+
 @end

@@ -11,6 +11,7 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
 #import "FindPwdVCL.h"
+#import "UserApi.h"
 
 @implementation LoginView
 
@@ -91,7 +92,7 @@
         return;
     }
     
-    
+    [self sendLoginReq:_tfUsernameLogin.text Password:_tfPwdLogin.text];
 }
 
 - (IBAction)handleSinaLogin:(id)sender {
@@ -137,7 +138,52 @@
         return;
     }
     
-    
+    [self sendRegistReq:_tfUsernameRegist.text Password:_tfPwdRegist.text];
 }
+
+#pragma mark - Request
+
+- (void)sendRegistReq:(NSString *)username Password:(NSString *)password{
+    [MBProgressHUD showHUDAddedTo:self animated:YES];
+    
+    UserApiRegisterRequest *request = [[UserApiRegisterRequest alloc]init];
+    request.username = username;
+    request.password = password;
+    
+    
+    [UserApi registerByRequest:request completionBlockWithSuccess:^(UserApiRegisterResponse *response) {
+        [MBProgressHUD hideHUDForView:self animated:YES];
+        [MBProgressHUD showSuccess:@"注册成功" toView:ShareAppDelegate.window];
+        
+        [self handleBackLogin:nil];
+        
+    } Fail:^(NSString *failDescript) {
+        [MBProgressHUD hideHUDForView:self animated:YES];
+        [MBProgressHUD showError:failDescript toView:ShareAppDelegate.window];
+        
+    }];
+
+}
+
+- (void)sendLoginReq:(NSString *)username Password:(NSString *)password{
+    [MBProgressHUD showHUDAddedTo:self animated:YES];
+    
+    UserApiLoginRequest *request = [[UserApiLoginRequest alloc]init];
+    request.username = username;
+    request.password = password;
+    // chenzftodo: token是什么
+    request.token = @"";
+    
+    [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
+        [MBProgressHUD hideHUDForView:self animated:YES];
+        [MBProgressHUD showSuccess:@"登录成功" toView:ShareAppDelegate.window];
+        
+        [self hide];
+    } Fail:^(NSString *failDescript) {
+        [MBProgressHUD hideHUDForView:self animated:YES];
+        [MBProgressHUD showError:failDescript toView:ShareAppDelegate.window];
+    }];
+}
+
 
 @end

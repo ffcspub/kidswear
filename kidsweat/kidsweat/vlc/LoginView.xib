@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -44,7 +44,7 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-8E-Qhv" userLabel="View - regist">
                             <rect key="frame" x="0.0" y="41" width="280" height="327"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="3zu-o3-q0Q">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="3zu-o3-q0Q">
                                     <rect key="frame" x="13" y="24" width="255" height="35"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6iK-9m-XXQ">
@@ -55,7 +55,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-AX-XCe">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-AX-XCe">
                                     <rect key="frame" x="12" y="83" width="255" height="35"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-5I-eIb">
@@ -66,7 +66,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-Db-gZc">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-Db-gZc">
                                     <rect key="frame" x="12" y="141" width="255" height="35"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FCP-ju-xXF">
@@ -130,7 +130,7 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfu-1r-mBR" userLabel="View - login">
                             <rect key="frame" x="0.0" y="41" width="280" height="190"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_top_bg" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-uS-WVK">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-uS-WVK">
                                     <rect key="frame" x="13" y="24" width="255" height="35"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-6M-RJ1">
@@ -141,7 +141,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="S06-Mn-I1t">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="login_shuru_box" translatesAutoresizingMaskIntoConstraints="NO" id="S06-Mn-I1t">
                                     <rect key="frame" x="12" y="75" width="255" height="35"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_secrete_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cid-x4-fi6">
