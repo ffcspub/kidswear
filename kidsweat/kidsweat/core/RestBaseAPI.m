@@ -17,6 +17,8 @@
 
 #define TIMEOUT_DEFAULT 30
 
+#define TESTMODE 1
+
 #define SUCCESS_CODE 1
 
 @interface RestBaseAPI (p)
@@ -77,6 +79,10 @@
     return [[AFHTTPClient alloc]initWithBaseURL:[NSURL URLWithString:request._serverUrl]];
 }
 
++(BOOL)isTestMode{
+    return NO;
+}
+
 +(BOOL)isCookiesVaildata{
     BOOL flag = NO;
     NSHTTPCookieStorage *cooieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
@@ -89,7 +95,26 @@
     return flag;
 }
 
++(id)objectByClass:(Class)clazz filePath:(NSString *)path{
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:path ofType:@"txt" ];
+    if(!filePath){
+        return nil;
+    }
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:kNilOptions error:nil];
+    id response = [dict objectByClass:clazz];
+    return response;
+}
+
 +(void)request:(RestBaseAPIRequest *)request completionBlockWithSuccess:(void(^)(RestBaseAPIResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail{
+    if([self isTestMode]){
+        Class clazz = [self responseClassByRequest:request];
+        NSString *resultFilePath = NSStringFromClass(clazz);
+        id result = [self objectByClass:clazz filePath:resultFilePath];
+        if(result){
+            sucess(result);
+            return;
+        }
+    }
     AFHTTPClient *client = [RestBaseAPI clientByRequest:request];
 //    client.parameterEncoding = AFFormURLParameterEncoding;
     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
