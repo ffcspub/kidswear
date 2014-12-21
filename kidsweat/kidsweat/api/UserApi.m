@@ -7,12 +7,19 @@
 //
 
 #import "UserApi.h"
+#import "LK_NSDictionary2Object.h"
+
+#define TESTMODE 1
+
 
 @implementation UserApi
 
++(BOOL)isTestMode{
+    return TESTMODE;
+}
+
 +(Class)responseClassByRequest:(RestBaseAPIRequest *)request{
     NSString *key = NSStringFromClass([request class]);
-    
     static dispatch_once_t onceToken;
     static NSDictionary *classDic;
     dispatch_once(&onceToken, ^{
@@ -31,6 +38,7 @@
     return NSClassFromString([classDic objectForKey:key]);
     
 }
+
 
 
 +(void)loginByRequest:(UserApiLoginRequest *)request completionBlockWithSuccess:(void(^)(UserApiLoginResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail{
