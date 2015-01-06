@@ -9,7 +9,7 @@
 #import "MenuViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "LoginView.h"
-
+#import "MyCenterVCL.h"
 
 @interface MenuViewController ()<UIViewControllerTransitioningDelegate>
 
@@ -41,13 +41,23 @@
 
 #pragma mark - Function
 
-- (IBAction)handleShowLoginView:(id)sender {
-    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-        LoginView *loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] lastObject];
-        [loginView show];
+- (IBAction)handleUsericonClicked:(id)sender {
+    [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {
+        // todo: 判断是否登录
+        if(1){
+            MyCenterVCL *vcl = [[MyCenterVCL alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
+            [self.mm_drawerController presentViewController:nav animated:YES completion:nil];
+            
+        }else{
+            LoginView *loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] lastObject];
+            [loginView show];
+        }
     }];
 }
 
 - (IBAction)handleLogout:(id)sender {
 }
+
+
 @end

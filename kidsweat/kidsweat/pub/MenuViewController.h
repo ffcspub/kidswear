@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 
 
-- (IBAction)handleShowLoginView:(id)sender;
+- (IBAction)handleUsericonClicked:(id)sender;
 - (IBAction)handleLogout:(id)sender;
 
 

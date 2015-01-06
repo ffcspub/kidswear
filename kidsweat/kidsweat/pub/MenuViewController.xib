@@ -38,13 +38,13 @@
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="listpang_line" translatesAutoresizingMaskIntoConstraints="NO" id="2vM-jN-v53">
                                     <rect key="frame" x="10" y="111" width="224" height="1"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21t-g6-uGH" userLabel="Button - login">
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21t-g6-uGH" userLabel="Button - usericon">
                                     <rect key="frame" x="10" y="18" width="224" height="76"/>
                                     <state key="normal">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="handleShowLoginView:" destination="-1" eventType="touchUpInside" id="KIk-fY-WWN"/>
+                                        <action selector="handleUsericonClicked:" destination="-1" eventType="touchUpInside" id="OTb-KD-yZu"/>
                                     </connections>
                                 </button>
                             </subviews>

@@ -12,5 +12,5 @@
 @interface CommonViewController : UIViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil;
-- (IBAction)backAction;
+- (void)backAction;
 @end

@@ -22,9 +22,9 @@
         self.navigationController.navigationBar.translucent = NO;
     }
 #endif
-    
-    // Do any additional setup after loading the view.
-    //[self showLeftBarButtonItemWithImage:@"btn_back" target:self action:@selector(backAction)];
+    if([self canBack]){
+        [self showLeftBarButtonItemWithImage:@"login_return_icon_nor" target:self action:@selector(backAction)];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +40,11 @@
     return [self initWithNibName:strNibName bundle:nil];
 }
 
-- (IBAction)backAction{
+-(BOOL)canBack{
+    return NO;
+}
+
+- (void)backAction{
     if (self.navigationController.viewControllers.count == 1) {
         [self.navigationController dismissViewControllerAnimated:YES completion:^{
             
