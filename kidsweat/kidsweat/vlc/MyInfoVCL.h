@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@interface ImageFileInfo : NSObject
+
+@property(nonatomic,strong) NSString *name;
+@property(nonatomic,strong) NSString *fileName;
+@property(nonatomic,strong) NSString *mimeType;
+@property(nonatomic,assign) long long filesize;
+@property(nonatomic,strong) NSData *fileData;
+
+-(id)initWithImage:(UIImage *)image;
+
+@end
+
+
 @interface MyInfoVCL : CommonViewController
-
-
-@property (weak, nonatomic) IBOutlet UIScrollView *svContain;
-@property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
 
 @end

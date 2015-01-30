@@ -16,6 +16,7 @@
     #import "AppDelegate.h"
     #import "CommonViewController.h"
     #import "ShareValue.h"
+    #import "CommonDefine.h"
 #endif
 
 

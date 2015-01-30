@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyInfoEditVCL">
+            <connections>
+                <outlet property="ivManSelected" destination="l4z-Aq-7r4" id="mjf-J9-evc"/>
+                <outlet property="ivWomanSelected" destination="XMf-X0-FRf" id="h89-cU-Dvk"/>
+                <outlet property="tfNickname" destination="qcH-zQ-Sko" id="VCV-jW-abi"/>
+                <outlet property="txAddress" destination="98l-HW-Mo4" id="xFd-Yo-dQd"/>
+                <outlet property="vAddress" destination="3Qf-0i-Tdn" id="IuF-P1-7q5"/>
+                <outlet property="vNickname" destination="YGr-gE-5oY" id="gaC-Dx-KEb"/>
+                <outlet property="vSex" destination="YAa-wW-KDV" id="Lct-Dk-AHG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qf-0i-Tdn" userLabel="View - 收货地址">
+                    <rect key="frame" x="5" y="10" width="310" height="100"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_setting_mid" translatesAutoresizingMaskIntoConstraints="NO" id="6af-Lz-C0b">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98l-HW-Mo4">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGr-gE-5oY" userLabel="View - 昵称">
+                    <rect key="frame" x="5" y="10" width="310" height="54"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_setting_mid" translatesAutoresizingMaskIntoConstraints="NO" id="VSw-HP-hLK">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="54"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新的昵称" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qcH-zQ-Sko">
+                            <rect key="frame" x="10" y="0.0" width="300" height="54"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAa-wW-KDV" userLabel="View - 性别">
+                    <rect key="frame" x="5" y="10" width="310" height="109"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_setting_mid" translatesAutoresizingMaskIntoConstraints="NO" id="C8f-MP-cAd">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="54"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="男" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg1-Rp-flU">
+                            <rect key="frame" x="12" y="16" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_selected" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-Aq-7r4">
+                            <rect key="frame" x="277" y="15" width="23" height="23"/>
+                        </imageView>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqE-S3-dwI" userLabel="Button - 男">
+                            <rect key="frame" x="5" y="2" width="310" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="handleSelectSex:" destination="-1" eventType="touchUpInside" id="42x-9p-ZOD"/>
+                            </connections>
+                        </button>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_setting_mid" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-bT-M8P">
+                            <rect key="frame" x="0.0" y="55" width="310" height="54"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="女" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-8o-baj">
+                            <rect key="frame" x="12" y="71" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_selected" translatesAutoresizingMaskIntoConstraints="NO" id="XMf-X0-FRf">
+                            <rect key="frame" x="277" y="70" width="23" height="23"/>
+                        </imageView>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvh-4t-jSI" userLabel="Button - 女">
+                            <rect key="frame" x="0.0" y="57" width="310" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="handleSelectSex:" destination="-1" eventType="touchUpInside" id="Cd0-nx-yXF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="423" y="394"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_setting_mid" width="310" height="54"/>
+        <image name="icon_selected" width="23" height="23"/>
+    </resources>
+</document>
