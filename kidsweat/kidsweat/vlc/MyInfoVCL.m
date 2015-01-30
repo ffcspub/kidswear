@@ -13,6 +13,7 @@
 #import "UserIconSettingViewController.h"
 #import "UIImage+External.h"
 #import "MyInfoEditVCL.h"
+#import "AlertListManagement.h"
 
 @implementation ImageFileInfo
 
@@ -41,11 +42,15 @@
 
 @end
 
-@interface MyInfoVCL ()<LXActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UserIconSettingDelegate>{
+@interface MyInfoVCL ()<LXActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UserIconSettingDelegate,AlertListManagementDelegate>{
     UIImagePickerController *_picker;
     UIImage *_userPhoto;
     MBProgressHUD *_hud;
     long long _currentWriten;
+    
+    AlertListManagement *_areaSelectView;
+    NSString *_strProvinceSel;
+    NSString *_strCitySel;
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *svContain;
@@ -159,7 +164,9 @@
             
         case 5:{
             // 地区
-            
+            _strProvinceSel = @"";
+            _strCitySel = @"";
+            [self showAreaSelectView];
         }
             break;
             
@@ -198,6 +205,42 @@
         
         [self performSelector:@selector(uploadImageReq) withObject:nil afterDelay:0.1f];
     }
+}
+
+- (NSArray *)getProvinceData{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
+    NSArray *aryCity = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    for(NSDictionary *dict in aryCity){
+        [result addObject:dict[@"state"]];
+    }
+    
+    return result;
+}
+
+- (NSArray *)getCityDataByProvince:(NSString *)province{
+    if(province.length < 1){
+        return @[@"未找到城市"];
+    }
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
+    NSArray *aryCity = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    for(NSDictionary *dict in aryCity){
+        NSString *strProvince = dict[@"state"];
+        if([strProvince isEqualToString:province]){
+            NSArray *cities = dict[@"cities"];
+            return cities;
+        }
+    }
+    
+    return @[@"未找到城市"];
+}
+
+- (void)showAreaSelectView{
+    _areaSelectView = [[[NSBundle mainBundle] loadNibNamed:@"AlertListManagement" owner:nil options:nil] lastObject];
+    _areaSelectView.levelCount = 2;
+    _areaSelectView.delegate = self;
+    [_areaSelectView show];
 }
 
 //开始拍照
@@ -271,6 +314,35 @@
     }else if (buttonIndex == 1){
         [self LocalPhoto];
     }
+}
+
+#pragma mark - AlertListManagementDelegate
+
+-(void)dataSelected:(NSObject *)data inLevelIndex:(int)levelIndex management:(AlertListManagement *)management{
+    if (levelIndex == 0 && data){
+        _strProvinceSel = (NSString *)data;
+    }else if(levelIndex == 1 && data){
+        _strCitySel = (NSString *)data;
+        _lbArea.text = [NSString stringWithFormat:@"%@ %@",_strProvinceSel,_strCitySel];
+    }
+}
+
+-(void)willNextLevel:(int)levelIndex management:(AlertListManagement *)management{
+    if (levelIndex == 0) {
+        [management setTitle:@"请选择" levelIndex:0];
+        [management setDataList:[self getProvinceData] levelIndex:levelIndex selectedObject:nil];
+        management.levelIndex = levelIndex;
+        [management reload];
+    }else if(levelIndex == 1){
+        [management setTitle:@"请选择" levelIndex:0];
+        [management setDataList:[self getCityDataByProvince:_strProvinceSel] levelIndex:levelIndex selectedObject:nil];
+        management.levelIndex = levelIndex;
+        [management reload];
+    }
+}
+
+-(void)alertListManagementWillFinish:(AlertListManagement *)management{
+    
 }
 
 #pragma mark - UserIconSettingDelegate

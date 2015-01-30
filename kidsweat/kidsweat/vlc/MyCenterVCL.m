@@ -10,6 +10,7 @@
 #import "MyCenterCell.h"
 #import "UIColor+External.h"
 #import "MyHomeVCL.h"
+#import "CircleHomeVC.h"
 
 @interface MyCenterVCL ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -52,7 +53,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -66,6 +67,10 @@
             break;
         case 2:
             return 3;
+            break;
+            
+        case 3:
+            return 1;
             break;
             
         default:
@@ -138,6 +143,13 @@
             }
         }
             break;
+        case 3:{
+            if(indexPath.row == 0){
+                cell.ivIcon.image = [UIImage imageNamed:@"mypage_zhenb_icon"];
+                cell.lbName.text = @"珍宝阁";
+            }
+        }
+            break;
             
         default:
             break;
@@ -152,6 +164,51 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *viewController = nil;
+    switch (indexPath.section) {
+        case 0:{
+            if(indexPath.row == 0){
+                //购物车
+                
+            }else if(indexPath.row == 1){
+                //全部订单
+
+            }
+        }
+            
+            break;
+        case 1:{
+            if(indexPath.row == 0){
+                //待评价
+            }
+        }
+            break;
+        case 2:{
+            if(indexPath.row == 0){
+                //我的优惠券
+                
+            }else if(indexPath.row == 1){
+                //我的喜欢
+                
+            }else if(indexPath.row == 2){
+                //我的收藏
+            }
+        }
+            break;
+        case 3:{
+            if(indexPath.row == 0){
+                //珍宝阁
+                viewController = [[CircleHomeVC alloc] init];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end
