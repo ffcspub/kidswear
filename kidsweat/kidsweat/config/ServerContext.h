@@ -48,6 +48,8 @@
 
 #define API_GET_ORDER_LIST @"userapi.php?act=get_order_list"
 
+#define API_GET_GOOD_LIST @"userapi.php?act=list_goods"
+
 
 #define API_GET_ORDER_INFO @"userapi.php?act=get_order_info"
 

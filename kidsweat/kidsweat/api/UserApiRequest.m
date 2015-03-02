@@ -12,6 +12,14 @@
 @implementation UserApiLoginRequest
 
 
+-(id)init{
+    self = [super init];
+    if (self) {
+        self.token = nil;
+    }
+    return self;
+}
+
 -(NSString *)_apiPath{
     return API_LOGIN;
 }
@@ -55,6 +63,14 @@
 
 -(NSString *)_apiPath{
     return API_OATH;
+}
+
+-(id)init{
+    self = [super init];
+    if (self) {
+        self.token = nil;
+    }
+    return self;
 }
 
 @end

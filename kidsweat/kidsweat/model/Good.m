@@ -8,6 +8,15 @@
 
 #import "Good.h"
 
+@implementation CarGood
+
+@end
+
+
 @implementation Good
+
+@end
+
+@implementation GoodDetail
 
 @end

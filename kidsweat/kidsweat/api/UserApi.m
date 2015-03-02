@@ -34,15 +34,21 @@
                      @"UserApiUpdateUserInfoRequest":@"UserApiUpdateUserInfoResponse"
                      };
     });
-    
     return NSClassFromString([classDic objectForKey:key]);
-    
 }
 
-
-
+/**
+ *  登录
+ *
+ *  @param request 请求
+ *  @param sucess  成功block
+ *  @param fail    失败block
+ */
 +(void)loginByRequest:(UserApiLoginRequest *)request completionBlockWithSuccess:(void(^)(UserApiLoginResponse *response))sucess Fail:(void(^)(NSString *failDescript))fail{
     [UserApi request:request completionBlockWithSuccess:^(RestBaseAPIResponse *response) {
+        UserApiLoginResponse *loginResponse = (UserApiLoginResponse *)response;
+        [ShareValue standardShareValue].token = loginResponse.Data.token;
+        [ShareValue standardShareValue].userInfo = response.Data;
         sucess((UserApiLoginResponse *)response);
     } Fail:^(NSString *failDescript) {
         fail(failDescript);

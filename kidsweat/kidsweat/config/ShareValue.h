@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserInfo.h"
 
 @interface ShareValue : NSObject
 
@@ -17,5 +18,9 @@
 @property(nonatomic,strong) NSString *username;
 
 @property(nonatomic,strong) NSString *pwd;
+
+@property(nonatomic,strong) NSString *token;
+
+@property(nonatomic,strong) UserInfo *userInfo;
 
 @end

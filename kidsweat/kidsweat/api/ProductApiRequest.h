@@ -38,3 +38,19 @@
 
 @end
 
+/**
+ *  查询商品列表
+ */
+@interface QueryGoodsListRequest : RestBaseAPIRequest
+
+@property(nonatomic,strong) NSNumber *category_id;
+@property(nonatomic,strong) NSString *keywords;
+@property(nonatomic,assign) int page;
+@property(nonatomic,strong) NSNumber *brand;
+@property(nonatomic,strong) NSNumber *Price_max;
+@property(nonatomic,strong) NSNumber *Price_min;
+@property(nonatomic,strong) NSString *sort;
+@property(nonatomic,strong) NSString *order;
+
+@end
+

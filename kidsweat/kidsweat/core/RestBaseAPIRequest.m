@@ -8,8 +8,17 @@
 
 #import "RestBaseAPIRequest.h"
 #import "ServerContext.h"
+#import "ShareValue.h"
 
 @implementation RestBaseAPIRequest
+
+-(id)init{
+    self = [super init];
+    if (self) {
+        self.token = [ShareValue standardShareValue].token;
+    }
+    return self;
+}
 
 -(NSString *)_serverUrl{
     return URL_SERVER_BASE;

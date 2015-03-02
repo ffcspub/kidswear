@@ -25,10 +25,6 @@
  */
 @property(nonatomic,strong) NSString *password;
 
-/**
- * token
- */
-@property(nonatomic,strong) NSString *token;
 
 @end
 
@@ -43,10 +39,6 @@
  */
 @property(nonatomic,strong) NSString *user_id;
 
-/**
- * token
- */
-@property(nonatomic,strong) NSString *token;
 
 @end
 

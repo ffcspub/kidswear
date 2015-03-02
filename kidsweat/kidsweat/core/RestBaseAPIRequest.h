@@ -16,6 +16,11 @@
 @interface RestBaseAPIRequest :NSObject<BaseAPIRequest>
 
 /**
+ * token
+ */
+@property(nonatomic,strong) NSString *token;
+
+/**
  *  服务端地址
  *
  */
