@@ -9,18 +9,10 @@
 #import "ProductApiResponse.h"
 #import "Good.h"
 
-@implementation GetCarGoodsApiResponse
+@implementation QueryGoodsListResponse
 
-+(Class)__Goods_listClass{
++(Class)__goods_listClass{
     return [Good class];
 }
-
-@end
-
-@implementation DropCarGoodsApiResponse
-
-@end
-
-@implementation UpdateCarApiResponse
 
 @end

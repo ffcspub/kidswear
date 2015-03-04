@@ -17,6 +17,23 @@
 
 @end
 
+
+@implementation GoodPropertieValue
+
+@end
+
+@implementation GoodPropertie
+
++(Class)__valuesClass{
+    return [GoodPropertieValue class];
+}
+
+@end
+
 @implementation GoodDetail
+
++(Class)__propertiesClass{
+    return [GoodPropertie class];
+}
 
 @end

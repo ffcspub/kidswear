@@ -32,6 +32,8 @@
 
 @end
 
+
+
 @interface Good : NSObject
 
 @property(nonatomic,strong) NSString *goods_id;//商品id
@@ -41,14 +43,34 @@
 @property(nonatomic,strong) NSString *comment_num;//评论数量
 @property(nonatomic,strong) NSString *market_price;//市场价格
 @property(nonatomic,strong) NSString *shop_price;//价格
-@property(nonatomic,strong) NSString *type;//
 @property(nonatomic,strong) NSString *promote_price;//促销价格
 @property(nonatomic,strong) NSString *goods_thumb;//商品缩略图
 @property(nonatomic,strong) NSString *goods_img;//商品图
 
 @end
 
+//商品属性值
+@interface GoodPropertieValue : NSObject
 
+@property(nonatomic,strong) NSString *lable;//标签
+@property(nonatomic,strong) NSString *price;
+@property(nonatomic,strong) NSString *format_price;//差价
+@property(nonatomic,strong) NSString *id;
+
+@end
+
+//商品属性
+@interface GoodPropertie : NSObject
+
+@property(nonatomic,strong) NSString *attr_type;
+@property(nonatomic,strong) NSString *name;
+@property(nonatomic,strong) NSArray  *values;
+
+@end
+
+/**
+ *  商品详情
+ */
 @interface GoodDetail:Good
 
 @property(nonatomic,strong) NSString *cat_id;//分类id
@@ -61,5 +83,9 @@
 @property(nonatomic,strong) NSString *goods_weight;//商品重量
 @property(nonatomic,strong) NSString *promote_start_date;//促销开始时间
 @property(nonatomic,strong) NSString *promote_end_date;//促销结束时间
+@property(nonatomic,strong) NSString *shop_price_formated;//格式化的商品价
+@property(nonatomic,strong) NSArray *properties;//商品属性规格
 
 @end
+
+

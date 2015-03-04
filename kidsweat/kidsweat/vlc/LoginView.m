@@ -172,8 +172,6 @@
     request.username = username;
     request.password = password;
     // chenzftodo: token是什么
-    request.token = @"";
-    
     [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
         [MBProgressHUD hideHUDForView:self animated:YES];
         [MBProgressHUD showSuccess:@"登录成功" toView:ShareAppDelegate.window];

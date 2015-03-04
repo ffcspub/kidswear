@@ -7,40 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RestBaseAPIResponse.h"
 
-/**
- *  查询购物车商品列表
- */
-@interface GetCarGoodsApiResponse : RestBaseAPIResponse
+//查询商品列表返回
+@interface QueryGoodsListResponse : NSObject
 
-@property(nonatomic,assign) int Total;
-
-@property(nonatomic,assign) float * Total_price;
-
-@property(nonatomic,strong) NSArray *Goods_list;
-
-@end
-
-
-/**
- *  删除购物车商品列表
- */
-@interface DropCarGoodsApiResponse : RestBaseAPIResponse
-
-@property(nonatomic,strong) NSString *rec_id;
-
-@end
-
-/**
- *  修改购物车商品列表
- */
-@interface UpdateCarApiResponse : RestBaseAPIResponse
-
-@property(nonatomic,strong) NSString *rec_id;
-
-@property(nonatomic,assign) int goods_number;
-
-@property(nonatomic,strong) NSString * token;
+@property(nonatomic,strong) NSString *IsLastpage;//是否最后一页
+@property(nonatomic,strong) NSArray *goods_list;//商品列表
 
 @end
