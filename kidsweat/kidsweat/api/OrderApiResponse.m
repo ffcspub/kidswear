@@ -8,6 +8,6 @@
 
 #import "OrderApiResponse.h"
 
-@implementation OrderApiResponse
+@implementation QueryOrderListResponse
 
 @end
