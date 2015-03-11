@@ -17,7 +17,7 @@
 
 #define TIMEOUT_DEFAULT 30
 
-#define TESTMODE 1
+#define TESTMODE 0
 
 #define SUCCESS_CODE 1
 
@@ -129,8 +129,17 @@
             NSLog(@"url:%@|response:%@",urlRequest.URL,responseString);
             NSError *error = nil;
             NSDictionary *dict = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
+            RestBaseAPIResponse *response =  nil;
             if (dict) {
-                RestBaseAPIResponse *response = [dict objectByClass:[self responseClassByRequest:request]];
+                Class clazz = [self responseClassByRequest:request];
+                if ([clazz isSubclassOfClass:[RestBaseAPIResponse class]]) {
+                    response = [dict objectByClass:[self responseClassByRequest:request]];
+                }else{
+                    response = [dict objectByClass:[RestBaseAPIRequest class]];
+                    NSDictionary *dict = (NSDictionary *)response.Data;
+                    NSObject *obj = [dict objectByClass:clazz];
+                    response.Data = obj;
+                }
                 if (response.Code != SUCCESS_CODE) {
                     NSString *errorMessage = [self getFailDescriptByErrorCode:response.__errorcode];
                     if (errorMessage.length == 0) {

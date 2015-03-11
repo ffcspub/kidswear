@@ -15,3 +15,5 @@
 @property(nonatomic,strong) NSArray *goods_list;//商品列表
 
 @end
+
+

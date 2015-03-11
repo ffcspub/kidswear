@@ -7,9 +7,24 @@
 //
 
 #import "ProductApiRequest.h"
+#import "ServerContext.h"
+
+@implementation QueryGoodsListRequest
+
+-(NSString *)_apiPath{
+    return API_GET_GOOD_LIST;
+}
+
+@end
 
 
+@implementation GetGoodDetailRequest
 
+-(NSString *)_apiPath{
+    return API_GET_GOOD_DETAIL;
+}
+
+@end
 
 
 

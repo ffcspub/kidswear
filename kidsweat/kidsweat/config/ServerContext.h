@@ -54,6 +54,9 @@
 
 #define API_GET_ORDER_INFO @"userapi.php?act=get_order_info"
 
+#define API_GET_GOOD_DETAIL @"userapi.php?act=goods_profile"
+
+
 #define NOTIFCATION_ERROR @"NOTIFCATION_ERROR"
 #define ERROR_DESCRIPTION @"ERROR_DESCRIPTION"
 #define ERROR_CODE @"ERROR_CODE"
