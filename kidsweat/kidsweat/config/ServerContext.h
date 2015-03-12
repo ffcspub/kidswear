@@ -53,9 +53,19 @@
 #define API_GET_ORDER_UPDATE @"userapi.php?act=edit_order"
 
 #define API_GET_ORDER_INFO @"userapi.php?act=get_order_info"
+#define API_ORDER_ACTIVE @"userapi.php?act=edit_order"
+#define API_UPDATE_ORDER_ADDRESS @"userapi.php?act=add_update_consignee"
 
 #define API_GET_GOOD_DETAIL @"userapi.php?act=goods_profile"
 
+#define API_GET_MY_BONUS @"userapi.php?act=list_bonus"
+#define API_ACTIVE_BONUS @"userapi.php?act=active_bonus"
+
+#define API_QUERY_COMMENTS @"userapi.php?act=comment_list"
+#define API_ADD_COMMENT @"userapi.php?act=add_comment"
+
+#define API_QUERY_ADDRESS @"userapi.php?act=get_consignee_list"
+#define API_DEL_ADDRESS @"userapi.php?act=drop_consignee"
 
 #define NOTIFCATION_ERROR @"NOTIFCATION_ERROR"
 #define ERROR_DESCRIPTION @"ERROR_DESCRIPTION"
