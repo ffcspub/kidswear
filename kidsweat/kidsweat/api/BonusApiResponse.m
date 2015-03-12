@@ -6,8 +6,13 @@
 //  Copyright (c) 2015年 ilikeido. All rights reserved.
 //
 
-#import "BoundApiResponse.h"
+#import "BonusApiResponse.h"
+#import "Bonus.h"
 
-@implementation BoundApiResponse
+@implementation GetMyBonusApiResponse
+
++(Class)__DataClass{
+    return [Bonus class];
+}
 
 @end

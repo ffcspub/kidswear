@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPI.h"
 
-@interface CommentApiResponse : NSObject
+@interface QueryCommentsResponse : RestBaseAPIResponse
+
+@property(nonatomic,strong) NSArray *Data;
 
 @end

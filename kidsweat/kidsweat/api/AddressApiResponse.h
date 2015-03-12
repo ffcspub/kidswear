@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPIResponse.h"
 
-@interface AddressApiResponse : NSObject
+@interface QueryAddressResponse : RestBaseAPIResponse
+
+@property(nonatomic,strong) NSArray *Data;
 
 @end

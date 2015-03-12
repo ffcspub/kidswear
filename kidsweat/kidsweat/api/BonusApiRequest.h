@@ -7,7 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPI.h"
 
-@interface BonusApiRequest : NSObject
+/**
+ *  获取我的优惠券
+ */
+@interface GetMyBonusRequest : RestBaseAPIRequest
+
+@property(nonatomic,assign) int pagesize;
+
+@property(nonatomic,assign) int page;
+
+@end
+
+/**
+ *  激活优惠券
+ */
+@interface ActiveBonusRequest : RestBaseAPIRequest
+
+@property(nonatomic,strong) NSString *bonus_sn;
 
 @end

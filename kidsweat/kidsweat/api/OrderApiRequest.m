@@ -29,7 +29,15 @@
 @implementation OrderAddressUpdateRequest
 
 -(NSString *)_apiPath{
-    return API_GET_ORDER_LIST;
+    return API_UPDATE_ORDER_ADDRESS;
+}
+
+@end
+
+@implementation OrderSureOrCancelRequest
+
+-(NSString *)_apiPath{
+    return API_ORDER_ACTIVE;
 }
 
 @end

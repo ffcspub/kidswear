@@ -7,7 +7,20 @@
 //
 
 #import "CommentRequest.h"
+#import "ServerContext.h"
 
-@implementation CommentRequest
+@implementation QueryCommentsRequest
+
+-(NSString *)_apiPath{
+    return API_QUERY_COMMENTS                                                                                                                                             ;
+}
+
+@end
+
+@implementation AddCommentRequest
+
+-(NSString *)_apiPath{
+    return API_ADD_COMMENT                                                                                                                                             ;
+}
 
 @end

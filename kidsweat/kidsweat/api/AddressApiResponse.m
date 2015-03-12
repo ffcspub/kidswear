@@ -7,7 +7,12 @@
 //
 
 #import "AddressApiResponse.h"
+#import "AddressInfo.h"
 
-@implementation AddressApiResponse
+@implementation QueryAddressResponse
+
++(Class)__DataClass{
+    return [AddressInfo class];
+}
 
 @end

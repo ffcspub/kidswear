@@ -7,7 +7,12 @@
 //
 
 #import "CommentApiResponse.h"
+#import "Comment.h"
 
-@implementation CommentApiResponse
+@implementation QueryCommentsResponse
+
++(Class)__DataClass{
+    return [Comment class];
+}
 
 @end

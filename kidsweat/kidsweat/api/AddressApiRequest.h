@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPI.h"
 
-@interface AddressApiRequest : NSObject
+@interface QueryAddressRequest : RestBaseAPIRequest
+
+@end
+
+@interface DelAddressRequest : RestBaseAPIRequest
+
+@property(nonatomic,strong) NSString *consignee;
 
 @end

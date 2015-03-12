@@ -35,12 +35,6 @@
 
 @end
 
-@implementation QueryGoodsListRequest
 
--(NSString *)_apiPath{
-    return API_GET_GOOD_LIST                                                                                                                                             ;
-}
-
-@end
 
 

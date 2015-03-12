@@ -7,7 +7,12 @@
 //
 
 #import "BonusApiRequest.h"
+#import "ServerContext.h"
 
-@implementation BonusApiRequest
+@implementation GetMyBonusRequest
+
+-(NSString *)_apiPath{
+    return API_UPDATE_CART                                                                                                                                             ;
+}
 
 @end

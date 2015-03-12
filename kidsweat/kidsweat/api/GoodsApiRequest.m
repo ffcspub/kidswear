@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 ilikeido. All rights reserved.
 //
 
-#import "ProductApiRequest.h"
+#import "GoodsApiRequest.h"
 #import "ServerContext.h"
 
 @implementation QueryGoodsListRequest

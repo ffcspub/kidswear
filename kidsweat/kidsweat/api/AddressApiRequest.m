@@ -7,7 +7,21 @@
 //
 
 #import "AddressApiRequest.h"
+#import "ServerContext.h"
 
-@implementation AddressApiRequest
+@implementation QueryAddressRequest
+
+-(NSString *)_apiPath{
+    return API_QUERY_ADDRESS                                                                                                                                             ;
+}
+
+@end
+
+@implementation DelAddressRequest
+
+
+-(NSString *)_apiPath{
+    return API_DEL_ADDRESS                                                                                                                                             ;
+}
 
 @end

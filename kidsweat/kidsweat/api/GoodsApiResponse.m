@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 ilikeido. All rights reserved.
 //
 
-#import "ProductApiResponse.h"
+#import "GoodsApiResponse.h"
 #import "Good.h"
 
 @implementation QueryGoodsListResponse

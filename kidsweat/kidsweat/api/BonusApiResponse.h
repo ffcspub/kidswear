@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestBaseAPI.h"
 
-@interface BoundApiResponse : NSObject
+/**
+ * 获取优惠券结果
+ */
+@interface GetMyBonusApiResponse : RestBaseAPIResponse
+
+@property(nonatomic,strong)NSArray *Data;
 
 @end

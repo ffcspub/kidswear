@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "RestBaseAPI.h"
-#import "ProductApiRequest.h"
-#import "ProductApiResponse.h"
+#import "GoodsApiRequest.h"
+#import "GoodsApiResponse.h"
 #import "Good.h"
 
-@interface ProductApi : RestBaseAPI
+@interface GoodsApi : RestBaseAPI
 
 
 /**

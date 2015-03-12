@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 ilikeido. All rights reserved.
 //
 
-#import "ProductApi.h"
+#import "GoodsApi.h"
 
-@implementation ProductApi
+@implementation GoodsApi
 
 +(Class)responseClassByRequest:(RestBaseAPIRequest *)request{
     NSString *key = NSStringFromClass([request class]);
