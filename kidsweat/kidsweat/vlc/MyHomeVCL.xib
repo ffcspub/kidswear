@@ -65,7 +65,7 @@
         </view>
     </objects>
     <resources>
-        <image name="myindex_bg.jpg" width="22" height="22"/>
+        <image name="myindex_bg.jpg" width="310" height="54"/>
         <image name="mypage_toux_img" width="52" height="52"/>
     </resources>
 </document>

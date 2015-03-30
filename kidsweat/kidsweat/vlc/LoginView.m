@@ -7,11 +7,15 @@
 //
 
 #import "LoginView.h"
+
 #import "UIView+Animation.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
-#import "FindPwdVCL.h"
+
 #import "UserApi.h"
+
+#import "FindPwdVCL.h"
+
 
 @implementation LoginView
 
@@ -171,7 +175,7 @@
     UserApiLoginRequest *request = [[UserApiLoginRequest alloc]init];
     request.username = username;
     request.password = password;
-    // chenzftodo: token是什么
+
     [UserApi loginByRequest:request completionBlockWithSuccess:^(UserApiLoginResponse *response) {
         [MBProgressHUD hideHUDForView:self animated:YES];
         [MBProgressHUD showSuccess:@"登录成功" toView:ShareAppDelegate.window];

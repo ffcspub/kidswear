@@ -10,9 +10,5 @@
 
 @interface MyHomeVCL : CommonViewController
 
-@property (weak, nonatomic) IBOutlet UIView *vHeader;
-@property (weak, nonatomic) IBOutlet UITableView *tvTrendList;
-
-
 
 @end

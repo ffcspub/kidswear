@@ -7,15 +7,20 @@
 //
 
 #import "MyHomeVCL.h"
+
+#import "SVPullToRefresh.h"
+
 #import "MyHomeCell.h"
 #import "MyInfoVCL.h"
 
 #define HEADBG_HEIGH 170
 
 @interface MyHomeVCL (){
-    UIView *_refreshBgView;
-    CGFloat _expandHeight;
+
 }
+
+@property (weak, nonatomic) IBOutlet UIView *vHeader;
+@property (weak, nonatomic) IBOutlet UITableView *tvTrendList;
 
 @end
 
@@ -42,41 +47,40 @@
     self.title = @"某某的主页";
     [_tvTrendList setTableHeaderView:_vHeader];
     
-    [self CreateSlideBackground];
+    __weak MyHomeVCL *weakSelf = self;
+    //    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [_tvTrendList addPullToRefreshWithActionHandler:^{
+        [weakSelf reloadDatas];
+    }];
+    
+    // load more
+    [_tvTrendList addInfiniteScrollingWithActionHandler:^{
+        [weakSelf loadMoreDatas];
+    }];
+    
+    // set pullToRefreshView title
+    [_tvTrendList.pullToRefreshView setTitle:@"松开手可以刷新" forState:SVPullToRefreshStateTriggered];
+    [_tvTrendList.pullToRefreshView setTitle:@"正在刷新" forState:SVPullToRefreshStateLoading];
+    [_tvTrendList.pullToRefreshView setTitle:@"下拉刷新" forState:SVPullToRefreshStateStopped];
 }
 
--(void)CreateSlideBackground{
-    
-    _refreshBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, HEADBG_HEIGH)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, HEADBG_HEIGH)];
-    [imageView setImage:[UIImage imageNamed:@"myindex_bg.jpg"]];
-    
-    //关键步骤 设置可变化背景view属性
-    imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight| UIViewAutoresizingFlexibleWidth;
-    imageView.clipsToBounds = YES;
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    
-    
-    [_refreshBgView addSubview:imageView];
-    
-    _expandHeight = CGRectGetHeight(_refreshBgView.frame);
-    
-    _tvTrendList.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    [_tvTrendList insertSubview:_refreshBgView atIndex:0];
-    
-    _refreshBgView.contentMode= UIViewContentModeScaleAspectFill;
-    _refreshBgView.clipsToBounds = YES;
-    
-    [_refreshBgView setFrame:CGRectMake(0, 0, CGRectGetWidth(_refreshBgView.frame), _expandHeight)];
-}
+
+#pragma mark - Request
 
 #pragma mark - Function
+
+-(void)reloadDatas{
+}
+
+-(void)loadMoreDatas{
+    
+}
 
 - (IBAction)handleUsericonClicked:(id)sender {
     MyInfoVCL *vcl = [[MyInfoVCL alloc] init];
     [self.navigationController pushViewController:vcl animated:YES];
 }
-
 
 
 #pragma mark - UITableViewDataSource
@@ -116,14 +120,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView*)scrollView{
-    CGFloat offsetY = scrollView.contentOffset.y;
-    
-    CGRect currentFrame = _refreshBgView.frame;
-    currentFrame.origin.y = offsetY;
-    currentFrame.size.height = _expandHeight+(-1*offsetY);
-    _refreshBgView.frame = currentFrame;
-}
 
 #pragma mark - Super Reload
 

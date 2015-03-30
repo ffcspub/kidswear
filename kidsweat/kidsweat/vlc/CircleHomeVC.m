@@ -7,8 +7,14 @@
 //
 
 #import "CircleHomeVC.h"
+
+#import "UIColor+External.h"
+
 #import "CircleTrendVC.h"
 #import "CircleThemeVC.h"
+#import "CircleAddNewVC.h"
+#import "MyLikeVC.h"
+#import "MyFavVC.h"
 
 @interface CircleHomeVC ()
 
@@ -45,6 +51,15 @@
 
 - (void)initView{
     self.title = @"珍宝阁";
+    UIButton *button= [UIButton buttonWithType:UIButtonTypeCustom];
+    button.contentMode = UIViewContentModeScaleAspectFit;
+    button.backgroundColor = [UIColor clearColor];
+    button.frame = CGRectMake(0, 0, 50, 30);
+    [button setTitleColor:HEX_RGB(0x92c200) forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [button setTitle:@"发表" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(handleRightButtom) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     _lbThemeNewCount.text = @"115";
     [self adjustRemainViewWithBg:_ivThemeNew CountLabel:_lbThemeNewCount];
@@ -69,6 +84,12 @@
 
 #pragma mark - Function
 
+- (void)handleRightButtom{
+    CircleAddNewVC *vcl = [[CircleAddNewVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 - (IBAction)handleFunctionClicked:(id)sender {
     UIViewController *viewController = nil;
     UIButton *button = (UIButton *)sender;
@@ -82,12 +103,14 @@
             
         case 2:{
             // 喜欢的
+            viewController = [[MyLikeVC alloc] init];
         }
             
             break;
             
         case 3:{
             // 收藏的
+            viewController = [[MyFavVC alloc] init];
         }
             
             break;

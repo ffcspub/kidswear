@@ -7,11 +7,21 @@
 //
 
 #import "MenuViewController.h"
+
+#import "UIImageView+WebCache.h"
 #import "UIViewController+MMDrawerController.h"
+
+#import "UserInfo.h"
+
 #import "LoginView.h"
 #import "MyCenterVCL.h"
 
 @interface MenuViewController ()<UIViewControllerTransitioningDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *ivUsericon;
+@property (weak, nonatomic) IBOutlet UILabel *lbNickname;
+@property (weak, nonatomic) IBOutlet UIButton *btnLogout;
+
 
 @end
 
@@ -35,23 +45,39 @@
 }
 
 - (void)initView{
-    
+    [self setUserInfo];
 }
 
 
 #pragma mark - Function
 
+- (void)setUserInfo{
+    if([ShareValue standardShareValue].userInfo &&
+       [ShareValue standardShareValue].userInfo.user_id.length > 0){
+        UserInfo *user = [[UserInfo alloc] init];
+        [_ivUsericon sd_setImageWithURL:[NSURL URLWithString:user.user_bonus]];
+        _lbNickname.text = user.username;
+        _btnLogout.hidden = NO;
+    }else{
+        _btnLogout.hidden = YES;
+    }
+}
+
 - (IBAction)handleUsericonClicked:(id)sender {
     [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {
-        // todo: 判断是否登录
-        if(1){
+        if([ShareValue standardShareValue].userInfo &&
+           [ShareValue standardShareValue].userInfo.user_id.length > 0){
             MyCenterVCL *vcl = [[MyCenterVCL alloc] init];
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
             [self.mm_drawerController presentViewController:nav animated:YES completion:nil];
             
         }else{
-            LoginView *loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] lastObject];
-            [loginView show];
+//            LoginView *loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] lastObject];
+//            [loginView show];
+            
+            MyCenterVCL *vcl = [[MyCenterVCL alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcl];
+            [self.mm_drawerController presentViewController:nav animated:YES completion:nil];
         }
     }];
 }

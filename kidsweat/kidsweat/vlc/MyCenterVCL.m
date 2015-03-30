@@ -7,12 +7,23 @@
 //
 
 #import "MyCenterVCL.h"
-#import "MyCenterCell.h"
+
+#import "UIImageView+WebCache.h"
 #import "UIColor+External.h"
+
+#import "MyCenterCell.h"
 #import "MyHomeVCL.h"
 #import "CircleHomeVC.h"
+#import "MyFavVC.h"
+#import "MyLikeVC.h"
+#import "MyShoppingCartVC.h"
+#import "MyOrderVC.h"
 
 @interface MyCenterVCL ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *ivUsericon;
+@property (weak, nonatomic) IBOutlet UILabel *lbNickname;
+@property (weak, nonatomic) IBOutlet UILabel *lbAccount;
 
 @end
 
@@ -38,9 +49,21 @@
 - (void)initView{
     self.title = @"我";
     [self showLeftBarButtonItemWithImage:@"mypage_home_icon_nor" target:self action:@selector(hanleLeftBtn)];
+    
+    [self setUserInfo];
 }
 
 #pragma mark - Function
+
+- (void)setUserInfo{
+    if([ShareValue standardShareValue].userInfo &&
+       [ShareValue standardShareValue].userInfo.user_id.length > 0){
+        UserInfo *user = [[UserInfo alloc] init];
+        [_ivUsericon sd_setImageWithURL:[NSURL URLWithString:user.user_bonus]];
+        _lbNickname.text = user.username;
+        _lbAccount.text = user.user_name;
+    }
+}
 
 - (void)hanleLeftBtn{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -170,10 +193,12 @@
         case 0:{
             if(indexPath.row == 0){
                 //购物车
+                viewController = [[MyShoppingCartVC alloc] init];
                 
             }else if(indexPath.row == 1){
                 //全部订单
-
+                viewController = [[MyOrderVC alloc] init];
+                
             }
         }
             
@@ -181,6 +206,7 @@
         case 1:{
             if(indexPath.row == 0){
                 //待评价
+                viewController = [[MyOrderVC alloc] init];
             }
         }
             break;
@@ -190,9 +216,11 @@
                 
             }else if(indexPath.row == 1){
                 //我的喜欢
+                viewController = [[MyLikeVC alloc] init];
                 
             }else if(indexPath.row == 2){
                 //我的收藏
+                viewController = [[MyFavVC alloc] init];
             }
         }
             break;
@@ -208,7 +236,9 @@
             break;
     }
     
-    [self.navigationController pushViewController:viewController animated:YES];
+    if(viewController){
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 @end

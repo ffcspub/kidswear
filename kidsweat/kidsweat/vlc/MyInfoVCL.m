@@ -15,12 +15,14 @@
 #import "MyInfoEditVCL.h"
 #import "AlertListManagement.h"
 
+
 @implementation ImageFileInfo
 
--(id)initWithImage:(UIImage *)image;{
+-(id)initWithImage:(UIImage *)image{
     self = [super init];
     if (self) {
         if (image) {
+            _image = image;
             _name = @"file";
             _mimeType = @"image/jpg";
             _fileData = UIImageJPEGRepresentation(image, 0.5);
@@ -137,7 +139,7 @@
             // 头像
             LXActionSheet *sheet = [[LXActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"立即拍照" otherButtonTitles:@"相册选择",nil];
             sheet.tag = 12;
-            [sheet setdestructiveButtonColor:RGB(86, 170, 14) titleColor:[UIColor whiteColor] icon:[UIImage imageNamed:@"micon-camera"]];
+            [sheet setdestructiveButtonColor:RGB(158, 208, 12) titleColor:[UIColor whiteColor] icon:[UIImage imageNamed:@"micon-camera"]];
             [sheet setCancelButtonColor:[UIColor whiteColor] titleColor:[UIColor redColor] icon:nil];
             [sheet setButtonIndex:1 buttonColor:[UIColor whiteColor] titleColor:[UIColor darkTextColor] icon:[UIImage imageNamed:@"micon-album"]];
             [sheet showInView:self.view];

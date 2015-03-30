@@ -10,11 +10,4 @@
 
 @interface MenuViewController : CommonViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *btnLogout;
-
-
-- (IBAction)handleUsericonClicked:(id)sender;
-- (IBAction)handleLogout:(id)sender;
-
-
 @end
